@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Redirecting...</title>
+    <script>
+        (function() {
+            // Construct the new URL by taking the current path, search parameters, and hash
+            const newUrl = 'https://trippy.rs' + window.location.pathname + window.location.search + window.location.hash;
+            // Redirect the user to the constructed URL
+            window.location.replace(newUrl);
+        })();
+    </script>
+</head>
+<body>
+<p>If you are not redirected automatically, follow this
+    <a id="redirect-link" href="#">link to trippy.rs</a>.
+</p>
+<script>
+    // Optionally, update the link on the page to point to the same redirected URL
+    document.getElementById('redirect-link').href = 'https://trippy.rs' + window.location.pathname + window.location.search + window.location.hash;
+</script>
+</body>
+</html>
